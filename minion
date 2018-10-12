@@ -1,0 +1,21 @@
+file_client: local
+
+id: test-task.vm
+
+pillar_roots:
+  base:
+    - /srv/salt/pillar/base
+
+fileserver_backend:
+  - roots
+  - git
+
+gitfs_remotes:
+  - https://github.com/saltstack-formulas/nginx-formula
+  - https://github.com/saltstack-formulas/php-formula
+  - https://github.com/salt-formulas/salt-formula-mysql
+
+file_roots:
+  base:
+    - /srv/salt/states/base
+
